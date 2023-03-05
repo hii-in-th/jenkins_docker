@@ -4,3 +4,4 @@ chmod 777 -R ./data
 
 echo "Deploy stack"
 docker stack deploy -c ./stack.yml jenkins
+chmod 777 -R ./data
