@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  jenkins:
+    image: jenkins:2.60.3
+    volumes:
+      - ./data/home/:/var/jenkins_home
+    # environment:
+    #   - DOCKER_TLS_CERTDIR=/certs
+    ports:
+      - 8983:8080
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 2048M
